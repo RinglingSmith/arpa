@@ -10,35 +10,15 @@
 <div class="content-warp">
 <header>
     <h1>ARPA</h1>
-     <form id="article-form">
-  <input type="text" id="title" placeholder="Article Title" required />
-  <textarea id="content" placeholder="Write your article here..." required></textarea>
-  <button type="submit">Save</button>
-</form>
+<a href="https://github.com/your-username/arpa.github.io/new/main?filename=_pages/NewPage.md&value=#%20Your%20Title%20Here" target="_blank">
+Upload New Files
+</a>
 
-<script>
-document.getElementById('article-form').onsubmit = async function (e) {
-  e.preventDefault();
-  const title = document.getElementById('title').value;
-  const content = document.getElementById('content').value;
-
-  await fetch('/api/articles', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title, content })
-  });
-
-  alert('Article saved!');
-};
-</script>
 </header>
 <div class="sidebar">
             <nav>
                 <ul>
-                    <li><a href="index.php?page=home">Home</a></li>
-                    <li><a href="index.php?page=about">About</a></li>
-                    <li><a href="index.php?page=contact">Contact</a></li>
-                    <li><a href="index.php?page=edit&pageToEdit=<?php echo urlencode($page); ?>">Edit</a></li>
+<a href="AC.html">AC files</a>
                 </ul>
             </nav>
         </div>
