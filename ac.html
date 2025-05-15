@@ -10,61 +10,7 @@
 <div class="content-warp">
 <header>
     <h1>ARPA</h1>
-    <form id="createPageForm">
-    <label for="title">Files Title:</label>
-    <input type="text" id="title" name="title" required>
-    <label for="content">Files Content:</label>
-    <textarea id="content" name="content" required></textarea>
-    <button type="submit">Create Page</button>
-  </form>
 </header>
-
- <script>
-    document.getElementById('createPageForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Gather form data
-      const title = document.getElementById('title').value;
-      const content = document.getElementById('content').value;
-
-      // Call the GitHub API to create a new file
-      createPageOnGitHub(title, content);
-    });
-
-    function createPageOnGitHub(title, content) {
-      const apiUrl = 'https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/docs/' + title + '.md';
-      const token = 'YOUR_PERSONAL_ACCESS_TOKEN';
-
-      // Base64 encode the content
-      const encodedContent = btoa(content);
-
-      const requestData = {
-        message: 'Create new anomaly page: ' + title,
-        content: encodedContent,
-        branch: 'main',
-      };
-
-      fetch(apiUrl, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `token ${token}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestData),
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.content) {
-          alert('Page created successfully!');
-        } else {
-          alert('Error creating the page.');
-        }
-      })
-      .catch(error => {
-        alert('An error occurred: ' + error.message);
-      });
-    }
-  </script>
 
 <div class="sidebar">
             <nav>
@@ -80,16 +26,16 @@
     <div class="content">
     <div class="page-title"><h1>Anomalies Control</h1></div>
     <div class="nice-box">
-    <p><h2>.Files Archive</h2></p>
-<a href="ac-001.html">About files</a>
+    <p><h2>Files Archive</h2></p>
+       <a href="ac-001.html">About files</a>
 
-<a href="ac-002.html">AC files</a>
+       <a href="ac-002.html">AC files</a>
 
-<a href="ac-003.html">AC files</a>
+        <a href="ac-003.html">AC files</a>
 
-<a href="ac-004.html">AC files</a>
+        <a href="ac-004.html">AC files</a>
 
-<a href="ac-005.html">AC files</a>
+        <a href="ac-005.html">AC files</a>
     </div>
     </div>
     </div>
