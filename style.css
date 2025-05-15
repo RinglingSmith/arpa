@@ -6,17 +6,8 @@
 }
 
 a {
-  color: #0077cc;             /* Normal link color */
-  text-decoration: none;      /* Remove underline */
+  color: #ffffff;             /* Normal link color */
   transition: 0.2s;           /* Smooth animation */
-}
-
-a:hover {
-  color: hsl(0, 0%, 100%);             /* Highlight color */
-  text-decoration: underline; /* Optional underline on hover */
-  background-color: #f0f0f0;   /* Light background highlight */
-  border-radius: 4px;          /* Rounded corners */
-  padding: 2px 4px;            /* Padding for highlight effect */
 }
 
 /* General Body Styling */
