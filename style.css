@@ -15,7 +15,8 @@ body {
 }
 
 /* Header Styling */
-header {
+header { 
+    overflow: hidden;
     text-align: center;
     background-color: #222;
     color: #fff;
