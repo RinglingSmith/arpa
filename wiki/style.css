@@ -1,0 +1,157 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Layout: Flexbox for Sidebar and Content */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure responsive layout */
+    min-height: calc(100vh - 70px); /* Full height minus header/footer */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #333;
+    width: 20%; /* Adjusted for better fit */
+    min-width: 200px; /* Ensure minimum width for small screens */
+    padding: 10px;
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #444;
+}
+
+/* Main Content */
+#content-wrap {
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+    overflow: hidden;
+}
+
+#page-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px auto;
+    color: #424242;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+#main-content {
+    display: block;
+    max-width: 100%; /* Ensure it fits within the screen */
+    width: 100%; /* Use full width */
+    margin: 0 auto; /* Center alignment */
+    min-height: 100vh;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Code Blocks */
+pre, code {
+    background-color: #f8f8f8;
+    border: 1px solid #dddddd;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    overflow-x: auto;
+    word-wrap: break-word; /* Prevent horizontal overflow */
+}
+
+/* Alerts */
+.alert {
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    #side-bar {
+        width: 100%;
+        float: none;
+        border: none;
+    }
+    
+    #main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+}
