@@ -10,24 +10,26 @@
 <div class="content-warp">
 <header>
     <h1>ARPA</h1>
-<a href="https://github.com/your-username/arpa.github.io/new/main?filename=_pages/NewPage.md&value=#%20Your%20Title%20Here" target="_blank">
-Upload New Files
-</a>
-
 </header>
+
 <div class="sidebar">
             <nav>
                 <ul>
-<a href="AC.html">AC files</a>
+<a href="about.html">About files</a>
+
+<a href="ac.html">AC files</a>
                 </ul>
             </nav>
         </div>
 <body>
+    <div class="body">
     <div class="contaner">
     <div class="content">
     <div class="page-title"><h1>Main Page</h1></div>
         <h2>Anomalies Research Protocol Agency</h2>
-        <p>Warning this is beta page of ARPA contain the classified informations. Those who enter this website will be eliminated. Know what your doing.</p>
+        <p>Warning this is beta page of ARPA contain the classified informations. Those who enter this website will be eliminated. Know what your doing.
+        </p>
+        <div>
     </div>
     </div>
     </div>

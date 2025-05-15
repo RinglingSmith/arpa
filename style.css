@@ -5,8 +5,24 @@
     box-sizing: border-box;
 }
 
+a {
+  color: #0077cc;             /* Normal link color */
+  text-decoration: none;      /* Remove underline */
+  transition: 0.2s;           /* Smooth animation */
+}
+
+a:hover {
+  color: hsl(0, 0%, 100%);             /* Highlight color */
+  text-decoration: underline; /* Optional underline on hover */
+  background-color: #f0f0f0;   /* Light background highlight */
+  border-radius: 4px;          /* Rounded corners */
+  padding: 2px 4px;            /* Padding for highlight effect */
+}
+
 /* General Body Styling */
 body {
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f9;
@@ -39,6 +55,8 @@ header h1 {
 
 /* Sidebar */
 .sidebar {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
     background-color: #333;
     width: 20%; /* Adjusted for better fit */
     min-width: 200px; /* Ensure minimum width for small screens */

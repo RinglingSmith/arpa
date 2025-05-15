@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to My Wiki">
+    <title>My Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="content-warp">
+<header>
+    <h1>ARPA</h1>
+    <form id="createPageForm">
+    <label for="title">Files Title:</label>
+    <input type="text" id="title" name="title" required>
+    <label for="content">Files Content:</label>
+    <textarea id="content" name="content" required></textarea>
+    <button type="submit">Create Page</button>
+  </form>
+</header>
+
+ <script>
+    document.getElementById('createPageForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Gather form data
+      const title = document.getElementById('title').value;
+      const content = document.getElementById('content').value;
+
+      // Call the GitHub API to create a new file
+      createPageOnGitHub(title, content);
+    });
+
+    function createPageOnGitHub(title, content) {
+      const apiUrl = 'https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/docs/' + title + '.md';
+      const token = 'YOUR_PERSONAL_ACCESS_TOKEN';
+
+      // Base64 encode the content
+      const encodedContent = btoa(content);
+
+      const requestData = {
+        message: 'Create new anomaly page: ' + title,
+        content: encodedContent,
+        branch: 'main',
+      };
+
+      fetch(apiUrl, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `token ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestData),
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.content) {
+          alert('Page created successfully!');
+        } else {
+          alert('Error creating the page.');
+        }
+      })
+      .catch(error => {
+        alert('An error occurred: ' + error.message);
+      });
+    }
+  </script>
+
+<div class="sidebar">
+            <nav>
+                <ul>
+<a href="index.html.md">Home</a>
+
+<a href="about.html">About</a>
+                </ul>
+            </nav>
+        </div>
+<body>
+    <div class="contaner">
+    <div class="content">
+    <div class="page-title"><h1>Anomalies Control</h1></div>
+    <div class="nice-box">
+    <p><h2>.Files Archive</h2></p>
+<a href="ac-001.html">About files</a>
+
+<a href="ac-002.html">AC files</a>
+
+<a href="ac-003.html">AC files</a>
+
+<a href="ac-004.html">AC files</a>
+
+<a href="ac-005.html">AC files</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 ARPA. All rights reserved.</p>
+        <p> Powered by Github<p>
+    </footer>
+</body>
+</html>
