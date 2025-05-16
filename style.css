@@ -107,27 +107,28 @@ pre, code {
     background-color: #f8d7da;
     border-color: #f5c6cb;
 }
-
 .image-block {
+    max-width: 100%;
     width: 576px;
     margin: 20px auto;
     text-align: center;
     border: 1px solid #ccc;
     background-color: #f4f4f4;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .image-block img {
-    width: 100%;
-    height: auto;
+    width: 100%;       /* Responsive image */
+    height: auto;      /* Maintain aspect ratio */
     display: block;
 }
 
 .caption {
     font-size: 0.9em;
     color: #444;
-    margin-top: 8px;
     font-style: italic;
+    margin-top: 8px;
 }
 
 .image-source {
@@ -136,6 +137,7 @@ pre, code {
     text-align: center;
     margin-top: 4px;
 }
+
 .image-source a {
     color: #555;
     text-decoration: underline;
