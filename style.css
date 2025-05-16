@@ -36,8 +36,8 @@ body {
 
 /* Sidebar */
 #sidebar {
-    display: flex;
-    flex-direction: column;;
+   display: table;
+    clear: both;
     background-color: #333;
     width: 20%; 
     min-width: 200px; 
