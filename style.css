@@ -10,16 +10,6 @@ a {
   transition: 0.2s;           
 }
 
-/* General Body Styling */
-body {
-    -ms-flex: 70%; /* IE10 */
-    flex: 70%;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
 /* Header Styling */
 header { 
     overflow: hidden;
@@ -35,12 +25,14 @@ header h1 {
 }
 
 /* Layout: Flexbox for Sidebar and Content */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .container {
     display: flex;
-    flex-wrap: wrap; 
-    min-height: calc(100vh - 70px); 
-    width: 100%;
 }
+
 
 /* Sidebar */
 #sidebar {
@@ -53,12 +45,6 @@ header h1 {
 }
 
 /* Main Content */
-#content-wrap {
-    flex: 1; 
-    padding: 20px;
-    overflow: hidden;
-}
-
 #page-title {
     font-family: "Roboto", sans-serif;
     font-size: 30px;
