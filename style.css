@@ -43,18 +43,13 @@ header h1 {
 }
 
 /* Sidebar */
-.sidebar {
-    -ms-flex: 30%; 
-    flex: 30%;
+#sidebar {
+    display: flex;
+    flex-direction: column;;
     background-color: #333;
     width: 20%; 
     min-width: 200px; 
     padding: 10px;
-}
-
-#side-bar ul {
-    list-style-type: none;
-    padding: 0 5px 0;
 }
 
 /* Main Content */
