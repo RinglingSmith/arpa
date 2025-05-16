@@ -6,13 +6,12 @@
 }
 
 a {
-  color: #ffffff;             
-  transition: 0.2s;           
+    color: #ffffff;
+    transition: 0.2s;
 }
 
 /* Header Styling */
-header { 
-    overflow: hidden;
+header {
     text-align: center;
     background-color: #222;
     color: #fff;
@@ -21,46 +20,45 @@ header {
 
 header h1 {
     font-size: 2em;
-    margin: 0;
 }
 
-/* Layout: Flexbox for Sidebar and Content */
+/* Body Font */
 body {
     font-family: 'Poppins', sans-serif;
 }
 
-.container {
-  float: left;
-  padding: 20px;
-  width: 70%;}
-
+/* Content Layout */
+.content-wrap {
+    display: flex;
+}
 
 /* Sidebar */
-#sidebar {
-   display: table;
-    clear: both;
+.sidebar {
     background-color: #333;
-    width: 20%; 
-    min-width: 200px; 
+    width: 20%;
+    min-width: 200px;
     padding: 10px;
+    color: white;
+}
+
+.sidebar a {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
 }
 
 /* Main Content */
-#page-title {
+.container {
+    padding: 20px;
+    width: 80%;
+}
+
+.page-title h1 {
     font-family: "Roboto", sans-serif;
     font-size: 30px;
     font-weight: bold;
-    margin: 10px auto;
     color: #424242;
-    letter-spacing: -1px;
     text-align: center;
-}
-
-#main-content {
-    display: block;
-    width: 6601px; 
-    margin: 0 auto; 
-    min-height: 100vh;
 }
 
 /* Footer */
@@ -70,8 +68,6 @@ footer {
     background-color: #222;
     color: #fff;
     font-size: 0.9em;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
@@ -83,7 +79,7 @@ pre, code {
     font-family: "Courier New", Courier, monospace;
     font-size: 1em;
     overflow-x: auto;
-    word-wrap: break-word; 
+    word-wrap: break-word;
 }
 
 /* Alerts */
@@ -114,14 +110,11 @@ pre, code {
 
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
-    #side-bar {
-        width: 100%;
-        float: none;
-        border: none;
+    .content-wrap {
+        flex-direction: column;
     }
-    
-    #main-content {
-        margin-left: 0;
-        padding: 15px;
+
+    .sidebar, .container {
+        width: 100%;
     }
 }
