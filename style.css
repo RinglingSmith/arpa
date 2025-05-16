@@ -130,6 +130,17 @@ pre, code {
     font-style: italic;
 }
 
+.image-source {
+    font-size: 0.75em;
+    color: #777;
+    text-align: center;
+    margin-top: 4px;
+}
+.image-source a {
+    color: #555;
+    text-decoration: underline;
+}
+
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
     .content-wrap {
