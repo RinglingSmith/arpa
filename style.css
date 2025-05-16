@@ -108,6 +108,28 @@ pre, code {
     border-color: #f5c6cb;
 }
 
+.image-block {
+    width: 576px;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    padding: 10px;
+}
+
+.image-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.caption {
+    font-size: 0.9em;
+    color: #444;
+    margin-top: 8px;
+    font-style: italic;
+}
+
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
     .content-wrap {
