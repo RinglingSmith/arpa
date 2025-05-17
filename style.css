@@ -143,6 +143,41 @@ pre, code {
     text-decoration: underline;
 }
 
+.link-box {
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 1em 1.5em;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.link-box h2 {
+      font-size: 1.4em;
+      margin-bottom: 1em;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3em;
+}
+
+.link-box ul {
+      list-style-type: square;
+      padding-left: 1.2em;
+}
+
+.link-box li {
+      margin: 0.5em 0;
+}
+
+.link-box a {
+      text-decoration: none;
+      color: #2a2a2a;
+}
+
+.link-box a:hover {
+      text-decoration: underline;
+      color: #d20000;
+}
+
 /* Mobile responsiveness */
 @media screen and (max-width: 768px) {
     .content-wrap {
